@@ -1,0 +1,40 @@
+{
+  "id": "sync-f36a4f39-aa0e-4188-bc27-03d7d86b0ee5",
+  "createdAt": "2026-10-25T04:23:09.936Z",
+  "manifest": {
+    "schemaVersion": 1,
+    "dshVersion": "0.2.1-rc.2",
+    "platform": "android",
+    "sectionIds": [
+      "settings",
+      "ui",
+      "providers",
+      "plugins",
+      "prompts",
+      "skills",
+      "agentPresets",
+      "agentInstructions",
+      "self",
+      "mcp",
+      "sessions"
+    ],
+    "containsSecrets": false,
+    "transport": "git",
+    "sourceHome": "/data/user/0/com.dsharnessmobile.shell/files/home/.dsh",
+    "deviceId": "02a25b67-41f2-469a-93b7-420f110892d0",
+    "deviceName": "localhost"
+  },
+  "sectionHashes": {
+    "settings": "b03d236bc0b43a2d59b797adcc2cd7a32360f21d40012e35a072c0b10754d5dd",
+    "ui": "80978e7be56d94ff304f33196edab63d0a88159963ec4e66165754366dafa856",
+    "providers": "448e291bb58c867c825eb38d9bc97ac2f82540efe161308446c44943e07eb66d",
+    "plugins": "a0c3b1eab78afbceef2fac6f5cd721797b9a244c7e64092eb4565091d78f6e0e",
+    "prompts": "23d05fd89e9e61985416d8fb3dfc30e5aae4298aa4f684f2a0391b49d70e8cfd",
+    "skills": "2fe09dfb1ef1f6216d00cf7c1a1e3380349f61fe0ea40c3ea8dcb76e9d670eea",
+    "agentPresets": "305a1822a89612b404071a50e9a6a69bb330cb3f5f1d84348de4f55c097d6550",
+    "agentInstructions": "2fe09dfb1ef1f6216d00cf7c1a1e3380349f61fe0ea40c3ea8dcb76e9d670eea",
+    "self": "5369a3c422b7d54c5a93832c8f21d68ba5ed52cc04c572ee59cf7bee21f80889",
+    "mcp": "ffc68a1c2a77196d82d0f327db8972516e1c1987f314a02c5cee9cce42036997",
+    "sessions": "b2b35db081cb71f295f49921047ae933a485cfe40e4ece3e67a28de55f637dac"
+  }
+}

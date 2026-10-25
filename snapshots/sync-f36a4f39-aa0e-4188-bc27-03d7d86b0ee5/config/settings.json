@@ -1,0 +1,1194 @@
+{
+  "version": 1,
+  "namespaces": {
+    "session-log-deepseek": {
+      "value": {
+        "enabled": true
+      },
+      "base": {
+        "enabled": true
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "agent-default-model": {
+      "value": {
+        "provider": "deepseek-web",
+        "model": "deepseek-chat",
+        "reasoningEffort": "off"
+      },
+      "base": {
+        "provider": "deepseek-official",
+        "model": "deepseek-flash"
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "llm-pi-ai": {
+      "value": {
+        "providers": {
+          "sensenova": {
+            "apiKeyEnv": "SENSENOVA_API_KEY",
+            "displayName": "商汤日日新",
+            "api": "openai-completions",
+            "baseURL": "https://token.sensenova.cn/v1",
+            "models": [
+              {
+                "id": "deepseek-v4-flash",
+                "name": "deepseek-v4-flash",
+                "contextWindow": 1048576,
+                "maxTokens": 384000,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5.2",
+                "name": "glm-5.2",
+                "contextWindow": 1048576,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "sensenova-6.8-flash-lite",
+                "name": "sensenova-6.8-flash-lite",
+                "contextWindow": 262144,
+                "maxTokens": 65536,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "sensenova-u1.5-lite",
+                "name": "sensenova-u1.5-lite",
+                "contextWindow": 262144,
+                "input": [],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "kimi-k3",
+                "name": "kimi-k3",
+                "contextWindow": 1048576,
+                "maxTokens": 131072,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "deepseek-flash",
+                "name": "deepseek-flash",
+                "contextWindow": 1048576,
+                "maxTokens": 384000,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "maxTokensField": "",
+                  "thinkingFormat": "deepseek",
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "deepseek-v4.1-flash",
+                "name": "deepseek-v4.1-flash",
+                "contextWindow": 1048576,
+                "maxTokens": 384000,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              }
+            ],
+            "modelOverrides": {},
+            "compat": {
+              "chatTemplateKwargs": {},
+              "chatTemplateArgs": {}
+            },
+            "defaultContextWindow": 262144,
+            "defaultMaxTokens": 32768,
+            "defaultInput": [
+              "text"
+            ],
+            "headers": {},
+            "thinkingBudgets": {},
+            "streamIdleTimeoutMs": 300000,
+            "maxRequestImageBytes": 20971520,
+            "requestImagePixelBudget": 4194304,
+            "requestImageMaxBytes": 1048576
+          },
+          "sensenova-abroad": {
+            "apiKeyEnv": "SENSENOVA_ABROAD_API_KEY",
+            "displayName": "商汤日日新（海外）",
+            "api": "openai-completions",
+            "baseURL": "https://token.sensenova.ai/v1",
+            "models": [
+              {
+                "id": "sensenova-6.7-flash-lite",
+                "name": "sensenova-6.7-flash-lite",
+                "contextWindow": 262144,
+                "input": [],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "sensenova-u1-fast",
+                "name": "sensenova-u1-fast",
+                "contextWindow": 262144,
+                "input": [],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "sensenova-6.8-flash-lite",
+                "name": "sensenova-6.8-flash-lite",
+                "contextWindow": 262144,
+                "maxTokens": 65536,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "sensenova-u1.5-lite",
+                "name": "sensenova-u1.5-lite",
+                "contextWindow": 262144,
+                "input": [],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              }
+            ],
+            "modelOverrides": {},
+            "compat": {
+              "chatTemplateKwargs": {},
+              "chatTemplateArgs": {}
+            },
+            "defaultContextWindow": 262144,
+            "defaultMaxTokens": 32768,
+            "defaultInput": [
+              "text"
+            ],
+            "headers": {},
+            "thinkingBudgets": {},
+            "streamIdleTimeoutMs": 300000,
+            "maxRequestImageBytes": 20971520,
+            "requestImagePixelBudget": 4194304,
+            "requestImageMaxBytes": 1048576
+          },
+          "zai": {
+            "apiKeyEnv": "ZAI_API_KEY",
+            "models": [
+              {
+                "id": "glm-4.7",
+                "name": "GLM-4.7",
+                "contextWindow": 204800,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5-turbo",
+                "name": "GLM-5-Turbo",
+                "contextWindow": 200000,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5.2",
+                "name": "GLM-5.2",
+                "contextWindow": 1000000,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5.2-highspeed",
+                "name": "GLM-5.2 Highspeed",
+                "contextWindow": 1000000,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5.3",
+                "name": "GLM-5.3",
+                "contextWindow": 1000000,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5.3-flash",
+                "name": "GLM-5.3-Flash",
+                "contextWindow": 1000000,
+                "maxTokens": 131072,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "glm-5.3-highspeed",
+                "name": "GLM-5.3 Highspeed",
+                "contextWindow": 1000000,
+                "maxTokens": 131072,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              }
+            ],
+            "modelOverrides": {},
+            "compat": {
+              "chatTemplateKwargs": {},
+              "chatTemplateArgs": {}
+            },
+            "defaultContextWindow": 262144,
+            "defaultMaxTokens": 32768,
+            "defaultInput": [
+              "text"
+            ],
+            "headers": {},
+            "thinkingBudgets": {},
+            "streamIdleTimeoutMs": 300000,
+            "maxRequestImageBytes": 20971520,
+            "requestImagePixelBudget": 4194304,
+            "requestImageMaxBytes": 1048576
+          },
+          "openrouter": {
+            "apiKeyEnv": "OPENROUTER_API_KEY",
+            "models": [
+              {
+                "id": "cohere/north-mini-code:free",
+                "name": "Cohere: North Mini Code (free)",
+                "contextWindow": 256000,
+                "maxTokens": 64000,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "dots-studio/dots-3-note-preview:free",
+                "name": "Dots Studio: Dots3-Note Preview (free)",
+                "contextWindow": 512000,
+                "maxTokens": 460800,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "google/gemma-4-26b-a4b-it:free",
+                "name": "Google: Gemma 4 26B A4B  (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "google/gemma-4-31b-it:free",
+                "name": "Google: Gemma 4 31B (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "inclusionai/ling-3.0-flash-fin:free",
+                "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "inclusionai/ling-3.0-flash-sante:free",
+                "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "inclusionai/ling-3.0-flash-vl:free",
+                "name": "inclusionAI: Ling 3.0 Flash VL (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "liquid/lfm-2.5-2.6b:free",
+                "name": "LiquidAI: LFM2.5-2.6B (free)",
+                "contextWindow": 65536,
+                "maxTokens": 8192,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "nex-agi/nex-n2.5-mini:free",
+                "name": "Nex AGI: Nex-N2.5-Mini (free)",
+                "contextWindow": 262144,
+                "maxTokens": 235929,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "nex-agi/nex-n2.5-pro:free",
+                "name": "Nex AGI: Nex-N2.5-Pro (free)",
+                "contextWindow": 262144,
+                "maxTokens": 235929,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+                "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+                "contextWindow": 256000,
+                "maxTokens": 65536,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "nvidia/nemotron-3-super-120b-a12b:free",
+                "name": "NVIDIA: Nemotron 3 Super (free)",
+                "contextWindow": 262144,
+                "maxTokens": 235929,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+                "name": "NVIDIA: Nemotron 3 Ultra (free)",
+                "contextWindow": 1000000,
+                "maxTokens": 65536,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "nvidia/nemotron-3.5-lightning:free",
+                "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+                "contextWindow": 1000000,
+                "maxTokens": 65536,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "openrouter/free",
+                "name": "Free Models Router",
+                "contextWindow": 200000,
+                "maxTokens": 4096,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "poolside/laguna-s-2.1:free",
+                "name": "Poolside: Laguna S 2.1 (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "poolside/laguna-xs-2.1:free",
+                "name": "Poolside: Laguna XS 2.1 (free)",
+                "contextWindow": 262144,
+                "maxTokens": 32768,
+                "input": [
+                  "text"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "qwen/qwen3.8-27b:free",
+                "name": "Qwen: Qwen3.8 27B (free)",
+                "contextWindow": 262144,
+                "maxTokens": 235929,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "thinkingmachines/inkling-small:free",
+                "name": "Thinking Machines: Inkling Small (free)",
+                "contextWindow": 1048576,
+                "maxTokens": 262144,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              },
+              {
+                "id": "thinkingmachines/inkling:free",
+                "name": "Thinking Machines: Inkling (free)",
+                "contextWindow": 1048576,
+                "maxTokens": 262144,
+                "input": [
+                  "text",
+                  "image"
+                ],
+                "compat": {
+                  "chatTemplateKwargs": {},
+                  "chatTemplateArgs": {}
+                }
+              }
+            ],
+            "modelOverrides": {},
+            "compat": {
+              "chatTemplateKwargs": {},
+              "chatTemplateArgs": {}
+            },
+            "defaultContextWindow": 262144,
+            "defaultMaxTokens": 32768,
+            "defaultInput": [
+              "text"
+            ],
+            "headers": {},
+            "thinkingBudgets": {},
+            "streamIdleTimeoutMs": 300000,
+            "maxRequestImageBytes": 20971520,
+            "requestImagePixelBudget": 4194304,
+            "requestImageMaxBytes": 1048576
+          }
+        }
+      },
+      "base": {
+        "providers": {}
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "permission": {
+      "value": {
+        "defaultPreset": "danger-full-access"
+      },
+      "base": {},
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "subagent": {
+      "value": {
+        "maxDepth": 2,
+        "maxActiveSubagents": 10
+      },
+      "base": {
+        "maxDepth": 1,
+        "maxActiveSubagents": 8
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "web": {
+      "value": {
+        "searchProvider": "deepseek-official",
+        "fetchProvider": "http"
+      },
+      "base": {
+        "searchProvider": "deepseek-official",
+        "fetchProvider": "http"
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "web-search-deepseek": {
+      "value": {
+        "apiKeyEnv": "DEEPSEEK_API_KEY",
+        "model": "deepseek-v4-flash",
+        "apiVersion": "2023-06-01",
+        "maxTokens": 4096,
+        "maxUses": 5
+      },
+      "base": {
+        "apiKeyEnv": "DEEPSEEK_API_KEY",
+        "model": "deepseek-v4-flash",
+        "apiVersion": "2023-06-01",
+        "maxTokens": 4096,
+        "maxUses": 5
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": [
+        {
+          "path": [
+            "apiKey"
+          ],
+          "set": false
+        }
+      ]
+    },
+    "web-deepseek-api": {
+      "value": {
+        "apiKeyEnv": "DEEPSEEK_API_KEY",
+        "baseURL": "https://api.deepseek.com/v1/tools",
+        "count": 10,
+        "sendOriginalQuestion": true
+      },
+      "base": {
+        "apiKeyEnv": "DEEPSEEK_API_KEY",
+        "baseURL": "https://api.deepseek.com/v1/tools",
+        "count": 10,
+        "sendOriginalQuestion": true
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": [
+        {
+          "path": [
+            "apiKey"
+          ],
+          "set": false
+        }
+      ]
+    },
+    "agent-loop": {
+      "value": {
+        "maxParallelToolCalls": 10
+      },
+      "base": {
+        "maxParallelToolCalls": 10
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "llm-deepseek": {
+      "value": {
+        "maxTokens": 256000,
+        "defaultContextWindow": 1000000,
+        "models": [
+          {
+            "id": "deepseek-flash",
+            "name": "DeepSeek-V4.1-Flash",
+            "contextWindow": 1000000,
+            "systemPromptUpdate": "in-history",
+            "toolUpdate": "addition-only",
+            "inputModalities": [
+              "text",
+              "image"
+            ]
+          },
+          {
+            "id": "deepseek-v4-pro",
+            "name": "DeepSeek-V4-Pro",
+            "description": "Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.",
+            "contextWindow": 1000000,
+            "inputModalities": [
+              "text"
+            ]
+          }
+        ],
+        "streamIdleTimeoutMs": 300000,
+        "maxRequestFilesBytes": 134217728,
+        "maxInlineRequestImageBytes": 20971520,
+        "maxImagesPerRequest": 600,
+        "imageOffloadByteQuantum": 67108864,
+        "inlineImageOffloadByteQuantum": 10485760,
+        "imageOffloadCountQuantum": 20,
+        "filesApiTimeoutMs": 60000,
+        "fileExpiresAfterSeconds": 604800,
+        "fileRefreshMarginSeconds": 3600,
+        "fileQuotaCleanupBatch": 100,
+        "retryPolicy": {
+          "maxRetries": 5,
+          "retryableCodes": [
+            "EMPTY_RESPONSE",
+            "RATE_LIMIT",
+            "SERVER",
+            "TIMEOUT",
+            "TRANSPORT",
+            "MALFORMED_RESPONSE"
+          ],
+          "mode": "normal",
+          "backoff": {
+            "initialDelayMs": 500,
+            "maxDelayMs": 10000,
+            "jitterRatio": 0.1
+          }
+        },
+        "apiKeyEnv": "DEEPSEEK_API_KEY"
+      },
+      "base": {
+        "maxTokens": 256000,
+        "defaultContextWindow": 1000000,
+        "models": [
+          {
+            "id": "deepseek-flash",
+            "name": "DeepSeek-V4.1-Flash",
+            "contextWindow": 1000000,
+            "systemPromptUpdate": "in-history",
+            "toolUpdate": "addition-only",
+            "inputModalities": [
+              "text",
+              "image"
+            ]
+          },
+          {
+            "id": "deepseek-v4-pro",
+            "name": "DeepSeek-V4-Pro",
+            "description": "Stronger agentic coding, knowledge, and difficult reasoning; suited to complex or quality-critical tasks at higher cost.",
+            "contextWindow": 1000000,
+            "inputModalities": [
+              "text"
+            ]
+          }
+        ],
+        "streamIdleTimeoutMs": 300000,
+        "maxRequestFilesBytes": 134217728,
+        "maxInlineRequestImageBytes": 20971520,
+        "maxImagesPerRequest": 600,
+        "imageOffloadByteQuantum": 67108864,
+        "inlineImageOffloadByteQuantum": 10485760,
+        "imageOffloadCountQuantum": 20,
+        "filesApiTimeoutMs": 60000,
+        "fileExpiresAfterSeconds": 604800,
+        "fileRefreshMarginSeconds": 3600,
+        "fileQuotaCleanupBatch": 100,
+        "retryPolicy": {
+          "maxRetries": 5,
+          "retryableCodes": [
+            "EMPTY_RESPONSE",
+            "RATE_LIMIT",
+            "SERVER",
+            "TIMEOUT",
+            "TRANSPORT",
+            "MALFORMED_RESPONSE"
+          ],
+          "mode": "normal",
+          "backoff": {
+            "initialDelayMs": 500,
+            "maxDelayMs": 10000,
+            "jitterRatio": 0.1
+          }
+        },
+        "apiKeyEnv": "DEEPSEEK_API_KEY"
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "llm-deepseek-account": {
+      "value": {
+        "maxTokens": 256000,
+        "defaultContextWindow": 1000000,
+        "streamIdleTimeoutMs": 300000,
+        "maxRequestFilesBytes": 134217728,
+        "maxInlineRequestImageBytes": 20971520,
+        "maxImagesPerRequest": 600,
+        "imageOffloadByteQuantum": 67108864,
+        "inlineImageOffloadByteQuantum": 10485760,
+        "imageOffloadCountQuantum": 20,
+        "filesApiTimeoutMs": 60000,
+        "fileExpiresAfterSeconds": 604800,
+        "fileRefreshMarginSeconds": 3600,
+        "fileQuotaCleanupBatch": 100,
+        "retryPolicy": {
+          "maxRetries": 5,
+          "retryableCodes": [
+            "EMPTY_RESPONSE",
+            "RATE_LIMIT",
+            "SERVER",
+            "TIMEOUT",
+            "TRANSPORT",
+            "MALFORMED_RESPONSE"
+          ],
+          "mode": "normal",
+          "backoff": {
+            "initialDelayMs": 500,
+            "maxDelayMs": 10000,
+            "jitterRatio": 0.1
+          }
+        },
+        "modelsTimeoutMs": 5000,
+        "modelsMaxAgeMs": 600000,
+        "modelOverrides": {}
+      },
+      "base": {
+        "maxTokens": 256000,
+        "defaultContextWindow": 1000000,
+        "streamIdleTimeoutMs": 300000,
+        "maxRequestFilesBytes": 134217728,
+        "maxInlineRequestImageBytes": 20971520,
+        "maxImagesPerRequest": 600,
+        "imageOffloadByteQuantum": 67108864,
+        "inlineImageOffloadByteQuantum": 10485760,
+        "imageOffloadCountQuantum": 20,
+        "filesApiTimeoutMs": 60000,
+        "fileExpiresAfterSeconds": 604800,
+        "fileRefreshMarginSeconds": 3600,
+        "fileQuotaCleanupBatch": 100,
+        "retryPolicy": {
+          "maxRetries": 5,
+          "retryableCodes": [
+            "EMPTY_RESPONSE",
+            "RATE_LIMIT",
+            "SERVER",
+            "TIMEOUT",
+            "TRANSPORT",
+            "MALFORMED_RESPONSE"
+          ],
+          "mode": "normal",
+          "backoff": {
+            "initialDelayMs": 500,
+            "maxDelayMs": 10000,
+            "jitterRatio": 0.1
+          }
+        },
+        "modelsTimeoutMs": 5000,
+        "modelsMaxAgeMs": 600000,
+        "modelOverrides": {}
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "subagent-model-selection-settings": {
+      "value": {
+        "enabled": false,
+        "allowedModels": []
+      },
+      "base": {
+        "enabled": false,
+        "allowedModels": []
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "ui-settings-account": {
+      "value": {
+        "version": 1,
+        "step": "welcome",
+        "usage": "compact",
+        "developerTools": false
+      },
+      "base": {
+        "version": 1,
+        "step": "welcome",
+        "usage": "compact",
+        "developerTools": false
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "ui-theme": {
+      "value": {
+        "preference": "light",
+        "fontSize": 14,
+        "codeFontSize": 11,
+        "terminalFontSize": 13,
+        "textFontFamily": "",
+        "codeFontFamily": "",
+        "terminalFontFamily": ""
+      },
+      "base": {
+        "preference": "system",
+        "fontSize": 14,
+        "codeFontSize": 11,
+        "terminalFontSize": 13,
+        "textFontFamily": "",
+        "codeFontFamily": "",
+        "terminalFontFamily": ""
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "locale": {
+      "value": {
+        "preference": "zh"
+      },
+      "base": {},
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "ui-settings": {
+      "value": {
+        "enabled": true
+      },
+      "base": {
+        "enabled": true
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "ui-settings-general": {
+      "value": {
+        "welcomeNoticeVersion": "2026-09-28.1"
+      },
+      "base": {},
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "ui-conversation": {
+      "value": {
+        "busyEnter": "steer"
+      },
+      "base": {
+        "busyEnter": "queue"
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "ui-chat": {
+      "value": {
+        "transcriptView": "standard",
+        "collapseTiming": "completion",
+        "performanceUsage": "detailed",
+        "linkOpening": "sidebar"
+      },
+      "base": {
+        "collapseTiming": "completion",
+        "performanceUsage": "detailed",
+        "linkOpening": "sidebar"
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "agent-preset-registry": {
+      "value": {},
+      "base": {},
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "llm-workbuddy-xdpool": {
+      "value": {
+        "cooldownMs": 60000,
+        "distribution": "priority",
+        "disabledAccountIds": [],
+        "creditReserves": {},
+        "enabledModelIds": [],
+        "imageModelIds": [],
+        "contextBudgets": {},
+        "modelSelectionCn": {
+          "enabledModelIds": [],
+          "imageModelIds": [],
+          "contextBudgets": {}
+        },
+        "modelSelectionGlobal": {
+          "enabledModelIds": [],
+          "imageModelIds": [],
+          "contextBudgets": {}
+        },
+        "automation": {
+          "enabled": false,
+          "checkinHours": [],
+          "reportHours": [],
+          "taskHours": [],
+          "streakHours": [],
+          "travelHours": []
+        },
+        "automationEarnings": {
+          "date": "2026-10-23",
+          "accounts": {}
+        }
+      },
+      "base": {
+        "cooldownMs": 60000,
+        "distribution": "priority",
+        "disabledAccountIds": [],
+        "creditReserves": {},
+        "enabledModelIds": [],
+        "imageModelIds": [],
+        "contextBudgets": {},
+        "modelSelectionCn": {
+          "enabledModelIds": [],
+          "imageModelIds": [],
+          "contextBudgets": {}
+        },
+        "modelSelectionGlobal": {
+          "enabledModelIds": [],
+          "imageModelIds": [],
+          "contextBudgets": {}
+        },
+        "automation": {
+          "enabled": false,
+          "checkinHours": [],
+          "reportHours": [],
+          "taskHours": [],
+          "streakHours": [],
+          "travelHours": []
+        }
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "cot-translation": {
+      "value": {
+        "provider": "bing",
+        "targetLanguage": "auto"
+      },
+      "base": {
+        "provider": "bing",
+        "targetLanguage": "auto"
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "plugin-market": {
+      "value": {
+        "indexes": [
+          "https://cdn.jsdelivr.net/npm/dsh-plugin-catalog/index.json",
+          "https://awesome-dsh-plugin.com/index.json"
+        ]
+      },
+      "base": {
+        "indexes": []
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    },
+    "shell-termux": {
+      "value": {
+        "cwd": "/data/data/com.dsharnessmobile.shell/files/home",
+        "timeoutMs": 120000,
+        "maxTimeoutMs": 600000,
+        "maxOutputBytes": 64000,
+        "maxSpillBytes": 67108864,
+        "graceMs": 3000
+      },
+      "base": {
+        "cwd": "/data/data/com.dsharnessmobile.shell/files/home",
+        "timeoutMs": 120000,
+        "maxTimeoutMs": 600000,
+        "maxOutputBytes": 64000,
+        "maxSpillBytes": 67108864,
+        "graceMs": 3000
+      },
+      "revision": 0,
+      "applies": [
+        "live"
+      ],
+      "secrets": []
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "channels": {
+    "git": {
+      "enabled": false,
+      "interval": "30m",
+      "startupMinIntervalMs": 300000,
+      "consecutiveFailures": 0,
+      "realtime": false,
+      "remoteCheckMs": 60000,
+      "autoApplyTier": "medium",
+      "conflictPolicy": "local"
+    },
+    "webdav": {
+      "enabled": false,
+      "interval": "30m",
+      "startupMinIntervalMs": 300000,
+      "consecutiveFailures": 0,
+      "realtime": true,
+      "remoteCheckMs": 60000,
+      "autoApplyTier": "medium",
+      "conflictPolicy": "local"
+    },
+    "s3": {
+      "enabled": false,
+      "interval": "30m",
+      "startupMinIntervalMs": 300000,
+      "consecutiveFailures": 0,
+      "realtime": true,
+      "remoteCheckMs": 60000,
+      "autoApplyTier": "medium",
+      "conflictPolicy": "local"
+    },
+    "gist": {
+      "enabled": false,
+      "interval": "30m",
+      "startupMinIntervalMs": 300000,
+      "consecutiveFailures": 0,
+      "realtime": true,
+      "remoteCheckMs": 60000,
+      "autoApplyTier": "medium",
+      "conflictPolicy": "local"
+    }
+  }
+}

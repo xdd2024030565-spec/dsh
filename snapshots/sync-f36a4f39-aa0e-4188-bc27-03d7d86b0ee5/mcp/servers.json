@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "servers": [
+    {
+      "serverName": "github",
+      "type": "streamable-http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": {
+          "__jsExpr": "`Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`"
+        }
+      },
+      "sourceLineId": "mcp-github",
+      "sourceFile": "profiles/web/cordis.patch.yml"
+    },
+    {
+      "serverName": "context7",
+      "type": "streamable-http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "Authorization": {
+          "__jsExpr": "`Bearer ${process.env.CONTEXT7_API_KEY}`"
+        }
+      },
+      "sourceLineId": "mcp-context7",
+      "sourceFile": "profiles/web/cordis.patch.yml"
+    },
+    {
+      "serverName": "cloudflare",
+      "type": "streamable-http",
+      "url": "https://mcp.cloudflare.com/mcp",
+      "headers": {
+        "Authorization": {
+          "__jsExpr": "`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`"
+        }
+      },
+      "sourceLineId": "mcp-cloudflare",
+      "sourceFile": "profiles/web/cordis.patch.yml"
+    }
+  ],
+  "connectors": {
+    "format": "dsh-config-manager.mcp-connector",
+    "version": 1,
+    "exportedAt": "2026-10-25T04:23:09.799Z",
+    "connections": [
+      {
+        "key": "github-github",
+        "connectorId": "github",
+        "kind": "manual",
+        "name": "GitHub",
+        "serverName": "github",
+        "transport": "streamable-http",
+        "enabled": true,
+        "serverKey": "github",
+        "injectionMode": "always",
+        "url": "https://api.githubcopilot.com/mcp/",
+        "headers": {
+          "Accept": "application/json, text/event-stream"
+        },
+        "authMode": "bearer",
+        "bearerToken": "",
+        "redactedFields": [
+          "bearerToken"
+        ]
+      }
+    ],
+    "oauthConnections": []
+  }
+}

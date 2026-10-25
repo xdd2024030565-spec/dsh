@@ -1,0 +1,1027 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "name": "@napi-rs/canvas",
+      "version": "1.0.11",
+      "spec": "^1.0.8",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "@napi-rs/canvas-android-arm64",
+      "version": "1.0.8",
+      "spec": "1.0.8",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "billion-context",
+      "version": "0.1.197",
+      "spec": "0.1.197",
+      "isBundle": true,
+      "inBundles": [
+        "billion-context"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-batch-tool-calls",
+      "version": "1.1.2",
+      "spec": "^1.1.2",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-batch-tool-calls"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-deepseek-web-login",
+      "version": "1.0.3",
+      "spec": "^1.0.3",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-deepseek-web-login"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-git-push",
+      "version": "2.9.9",
+      "spec": "^2.9.9",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-git-push"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-mc-agent",
+      "version": "0.4.3",
+      "spec": "github:blueziii/dsh-mc-agent#main",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-mc-agent"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-our-free-model",
+      "version": "2.5.3",
+      "spec": "github:Ebony-Vinyl/dsh-our-free-model#f0b979fdf48d3915504f5f20e0a105596712f3c8",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-our-free-model"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-workbuddy-xdpool",
+      "version": "2.0.1",
+      "spec": "^2.0.1",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-workbuddy-xdpool"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dshmarket",
+      "version": "1.66.28",
+      "spec": "^1.66.28",
+      "isBundle": true,
+      "inBundles": [
+        "dshmarket"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "minecrafthawkeye",
+      "version": "1.3.9",
+      "spec": "^1.3.9",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "mineflayer-auto-eat",
+      "version": "5.0.3",
+      "spec": "^5.0.3",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "mineflayer-collectblock",
+      "version": "1.6.0",
+      "spec": "^1.6.0",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "mineflayer-pathfinder",
+      "version": "2.4.5",
+      "spec": "^2.4.5",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "mineflayer-pvp",
+      "version": "1.3.2",
+      "spec": "^1.3.2",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "mineflayer-tool",
+      "version": "1.2.0",
+      "spec": "^1.2.0",
+      "isBundle": false,
+      "inBundles": [],
+      "enabled": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-agent-team-profile",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-agent-team-profile"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-cot-translation-bundle",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-cot-translation-bundle"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-plugin-market-bundle",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-plugin-market-bundle"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    }
+  ],
+  "patch": [
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "bash-sandbox",
+      "raw": {
+        "id": "bash-sandbox",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "shell-termux",
+      "raw": {
+        "id": "shell-termux",
+        "name": "@dsh-android/dsh-shell-termux",
+        "config": {
+          "bashPath": "/data/data/com.dsharnessmobile.shell/files/usr/bin/bash",
+          "prefix": "/data/data/com.dsharnessmobile.shell/files/usr",
+          "home": "/data/data/com.dsharnessmobile.shell/files/home",
+          "cwd": "/data/data/com.dsharnessmobile.shell/files/home",
+          "timeoutMs": 120000,
+          "maxTimeoutMs": 600000,
+          "writeMode": "workspace-write",
+          "workspaceRoot": "/data/data/com.dsharnessmobile.shell/files/home/.dsh/workspaces",
+          "sharedDirs": []
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "host-web-compat",
+      "raw": {
+        "id": "host-web-compat",
+        "name": "@dsh-android/dsh-host-web-compat"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ui-responsive",
+      "raw": {
+        "id": "ui-responsive",
+        "name": "@dsh-android/dsh-client-ui-responsive"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "dshmarketplace",
+      "raw": {
+        "id": "dshmarketplace",
+        "name": "dshmarketplace-plugin"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "open-in-app",
+      "raw": {
+        "id": "open-in-app",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ui-open-in-app",
+      "raw": {
+        "id": "ui-open-in-app",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "client-hmr",
+      "raw": {
+        "id": "client-hmr",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "android-bridge",
+      "raw": {
+        "id": "android-bridge",
+        "name": "@dsh-android/dsh-android-bridge"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "android-manage",
+      "raw": {
+        "id": "android-manage",
+        "name": "@dsh-android/dsh-android-manage"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "android-linux-env",
+      "raw": {
+        "id": "android-linux-env",
+        "name": "@dsh-android/dsh-android-linux-env"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "android-file-open",
+      "raw": {
+        "id": "android-file-open",
+        "name": "@dsh-android/dsh-android-file-open"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "model-capability",
+      "raw": {
+        "id": "model-capability",
+        "name": "@dsh-android/dsh-model-capability"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "agent-default-model",
+      "raw": {
+        "id": "agent-default-model",
+        "config": {
+          "provider": "deepseek-web",
+          "model": "deepseek-chat",
+          "reasoningEffort": "off"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "directory-picker",
+      "raw": {
+        "id": "directory-picker",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "picker-native-surface",
+      "raw": {
+        "id": "picker-native-surface",
+        "name": "@deepseek-ai/dsh-client-ui-directory-picker-native"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "android-browser",
+      "raw": {
+        "id": "android-browser",
+        "name": "@dsh-android/dsh-android-browser"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "android-vdisplay",
+      "raw": {
+        "id": "android-vdisplay",
+        "name": "@dsh-android/dsh-android-vdisplay"
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ptc-runtime",
+      "raw": {
+        "id": "ptc-runtime",
+        "config": {
+          "nodeExecutable": "/data/data/com.dsharnessmobile.shell/files/usr/libexec/dsh-node"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "office-to-pdf",
+      "raw": {
+        "id": "office-to-pdf",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "desktop-product-telemetry",
+      "raw": {
+        "id": "desktop-product-telemetry",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "product-analytics",
+      "raw": {
+        "id": "product-analytics",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "llm-pi-ai",
+      "raw": {
+        "id": "llm-pi-ai",
+        "name": "@deepseek-ai/dsh-llm-pi-ai",
+        "config": {
+          "providers": {
+            "sensenova": {
+              "displayName": "商汤日日新",
+              "apiKeyEnv": "SENSENOVA_API_KEY",
+              "api": "openai-completions",
+              "baseURL": "https://token.sensenova.cn/v1",
+              "models": [
+                {
+                  "id": "deepseek-v4-flash",
+                  "name": "deepseek-v4-flash",
+                  "contextWindow": 1048576,
+                  "input": [
+                    "text"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  },
+                  "maxTokens": 384000
+                },
+                {
+                  "id": "glm-5.2",
+                  "name": "glm-5.2",
+                  "contextWindow": 1048576,
+                  "input": [
+                    "text"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  },
+                  "maxTokens": 131072
+                },
+                {
+                  "id": "sensenova-6.8-flash-lite",
+                  "name": "sensenova-6.8-flash-lite",
+                  "contextWindow": 262144,
+                  "input": [
+                    "text",
+                    "image"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  },
+                  "maxTokens": 65536
+                },
+                {
+                  "id": "sensenova-u1.5-lite",
+                  "name": "sensenova-u1.5-lite",
+                  "contextWindow": 262144,
+                  "input": [],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  }
+                },
+                {
+                  "id": "kimi-k3",
+                  "name": "kimi-k3",
+                  "contextWindow": 1048576,
+                  "input": [
+                    "text",
+                    "image"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  },
+                  "maxTokens": 131072
+                },
+                {
+                  "id": "deepseek-flash",
+                  "name": "deepseek-flash",
+                  "contextWindow": 1048576,
+                  "input": [
+                    "text",
+                    "image"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {},
+                    "thinkingFormat": "deepseek",
+                    "maxTokensField": ""
+                  },
+                  "maxTokens": 384000
+                },
+                {
+                  "id": "deepseek-v4.1-flash",
+                  "name": "deepseek-v4.1-flash",
+                  "contextWindow": 1048576,
+                  "input": [
+                    "text",
+                    "image"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  },
+                  "maxTokens": 384000
+                }
+              ]
+            },
+            "sensenova-abroad": {
+              "displayName": "商汤日日新（海外）",
+              "apiKeyEnv": "SENSENOVA_ABROAD_API_KEY",
+              "api": "openai-completions",
+              "baseURL": "https://token.sensenova.ai/v1",
+              "models": [
+                {
+                  "id": "sensenova-6.7-flash-lite",
+                  "name": "sensenova-6.7-flash-lite",
+                  "contextWindow": 262144,
+                  "input": [],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  }
+                },
+                {
+                  "id": "sensenova-u1-fast",
+                  "name": "sensenova-u1-fast",
+                  "contextWindow": 262144,
+                  "input": [],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  }
+                },
+                {
+                  "id": "sensenova-6.8-flash-lite",
+                  "name": "sensenova-6.8-flash-lite",
+                  "contextWindow": 262144,
+                  "input": [
+                    "text",
+                    "image"
+                  ],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  },
+                  "maxTokens": 65536
+                },
+                {
+                  "id": "sensenova-u1.5-lite",
+                  "name": "sensenova-u1.5-lite",
+                  "contextWindow": 262144,
+                  "input": [],
+                  "compat": {
+                    "chatTemplateKwargs": {},
+                    "chatTemplateArgs": {}
+                  }
+                }
+              ]
+            },
+            "zai": {
+              "models": [
+                {
+                  "id": "glm-4.7",
+                  "name": "GLM-4.7",
+                  "contextWindow": 204800,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "glm-5-turbo",
+                  "name": "GLM-5-Turbo",
+                  "contextWindow": 200000,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "glm-5.2",
+                  "name": "GLM-5.2",
+                  "contextWindow": 1000000,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "glm-5.2-highspeed",
+                  "name": "GLM-5.2 Highspeed",
+                  "contextWindow": 1000000,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "glm-5.3",
+                  "name": "GLM-5.3",
+                  "contextWindow": 1000000,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "glm-5.3-flash",
+                  "name": "GLM-5.3-Flash",
+                  "contextWindow": 1000000,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "glm-5.3-highspeed",
+                  "name": "GLM-5.3 Highspeed",
+                  "contextWindow": 1000000,
+                  "maxTokens": 131072,
+                  "input": [
+                    "text"
+                  ]
+                }
+              ],
+              "apiKeyEnv": "ZAI_API_KEY"
+            },
+            "openrouter": {
+              "models": [
+                {
+                  "id": "cohere/north-mini-code:free",
+                  "name": "Cohere: North Mini Code (free)",
+                  "contextWindow": 256000,
+                  "maxTokens": 64000,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "dots-studio/dots-3-note-preview:free",
+                  "name": "Dots Studio: Dots3-Note Preview (free)",
+                  "contextWindow": 512000,
+                  "maxTokens": 460800,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "google/gemma-4-26b-a4b-it:free",
+                  "name": "Google: Gemma 4 26B A4B  (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "google/gemma-4-31b-it:free",
+                  "name": "Google: Gemma 4 31B (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "inclusionai/ling-3.0-flash-fin:free",
+                  "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "inclusionai/ling-3.0-flash-sante:free",
+                  "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "inclusionai/ling-3.0-flash-vl:free",
+                  "name": "inclusionAI: Ling 3.0 Flash VL (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "liquid/lfm-2.5-2.6b:free",
+                  "name": "LiquidAI: LFM2.5-2.6B (free)",
+                  "contextWindow": 65536,
+                  "maxTokens": 8192,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "nex-agi/nex-n2.5-mini:free",
+                  "name": "Nex AGI: Nex-N2.5-Mini (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 235929,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "nex-agi/nex-n2.5-pro:free",
+                  "name": "Nex AGI: Nex-N2.5-Pro (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 235929,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+                  "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+                  "contextWindow": 256000,
+                  "maxTokens": 65536,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "nvidia/nemotron-3-super-120b-a12b:free",
+                  "name": "NVIDIA: Nemotron 3 Super (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 235929,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+                  "name": "NVIDIA: Nemotron 3 Ultra (free)",
+                  "contextWindow": 1000000,
+                  "maxTokens": 65536,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "nvidia/nemotron-3.5-lightning:free",
+                  "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+                  "contextWindow": 1000000,
+                  "maxTokens": 65536,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "openrouter/free",
+                  "name": "Free Models Router",
+                  "contextWindow": 200000,
+                  "maxTokens": 4096,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "poolside/laguna-s-2.1:free",
+                  "name": "Poolside: Laguna S 2.1 (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "poolside/laguna-xs-2.1:free",
+                  "name": "Poolside: Laguna XS 2.1 (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 32768,
+                  "input": [
+                    "text"
+                  ]
+                },
+                {
+                  "id": "qwen/qwen3.8-27b:free",
+                  "name": "Qwen: Qwen3.8 27B (free)",
+                  "contextWindow": 262144,
+                  "maxTokens": 235929,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "thinkingmachines/inkling-small:free",
+                  "name": "Thinking Machines: Inkling Small (free)",
+                  "contextWindow": 1048576,
+                  "maxTokens": 262144,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                },
+                {
+                  "id": "thinkingmachines/inkling:free",
+                  "name": "Thinking Machines: Inkling (free)",
+                  "contextWindow": 1048576,
+                  "maxTokens": 262144,
+                  "input": [
+                    "text",
+                    "image"
+                  ]
+                }
+              ],
+              "apiKeyEnv": "OPENROUTER_API_KEY"
+            }
+          }
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ui-settings-general",
+      "raw": {
+        "id": "ui-settings-general",
+        "name": "@deepseek-ai/dsh-client-ui-settings-general",
+        "config": {
+          "welcomeNoticeVersion": "2026-09-28.1"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "dsh-lan-bridge",
+      "raw": {
+        "id": "dsh-lan-bridge",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "billion-context-xdpool",
+      "raw": {
+        "id": "billion-context-xdpool",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "llm-workbuddy-xdpool",
+      "raw": {
+        "id": "llm-workbuddy-xdpool",
+        "name": "dsh-workbuddy-xdpool",
+        "config": {
+          "automationEarnings": {
+            "date": "2026-10-23",
+            "accounts": {}
+          }
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ui-chat",
+      "raw": {
+        "id": "ui-chat",
+        "name": "@deepseek-ai/dsh-client-ui-chat",
+        "config": {
+          "transcriptView": "standard"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ui-conversation",
+      "raw": {
+        "id": "ui-conversation",
+        "name": "@deepseek-ai/dsh-client-ui-conversation",
+        "config": {
+          "busyEnter": "steer"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "permission",
+      "raw": {
+        "id": "permission",
+        "name": "@deepseek-ai/dsh-permission-presets",
+        "config": {
+          "presets": {
+            "read-only": {
+              "sandbox": "read-only",
+              "approval": "ask"
+            },
+            "workspace-write": {
+              "sandbox": "workspace-write",
+              "approval": "ask"
+            },
+            "danger-full-access": {
+              "sandbox": "danger-full-access",
+              "approval": "never"
+            }
+          },
+          "defaultPreset": "danger-full-access"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "mcp-connector",
+      "raw": {
+        "id": "mcp-connector",
+        "disabled": true
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "mcp-github",
+      "raw": {
+        "id": "mcp-github",
+        "name": "@deepseek-ai/dsh-mcp-client",
+        "config": {
+          "serverName": "github",
+          "transport": "streamable-http",
+          "url": "https://api.githubcopilot.com/mcp/",
+          "headers": {
+            "Authorization": {
+              "__jsExpr": "`Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`"
+            }
+          },
+          "toolCallTimeoutMs": 120000,
+          "failOnStartupError": false,
+          "reconnect": {
+            "enabled": true,
+            "initialDelayMs": 1000,
+            "maxDelayMs": 30000,
+            "maxAttempts": 30
+          }
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "mcp-context7",
+      "raw": {
+        "id": "mcp-context7",
+        "name": "@deepseek-ai/dsh-mcp-client",
+        "config": {
+          "serverName": "context7",
+          "transport": "streamable-http",
+          "url": "https://mcp.context7.com/mcp",
+          "headers": {
+            "Authorization": {
+              "__jsExpr": "`Bearer ${process.env.CONTEXT7_API_KEY}`"
+            }
+          },
+          "toolCallTimeoutMs": 60000,
+          "failOnStartupError": false,
+          "reconnect": {
+            "enabled": true,
+            "initialDelayMs": 1000,
+            "maxDelayMs": 30000,
+            "maxAttempts": 30
+          }
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "mcp-cloudflare",
+      "raw": {
+        "id": "mcp-cloudflare",
+        "name": "@deepseek-ai/dsh-mcp-client",
+        "config": {
+          "serverName": "cloudflare",
+          "transport": "streamable-http",
+          "url": "https://mcp.cloudflare.com/mcp",
+          "headers": {
+            "Authorization": {
+              "__jsExpr": "`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`"
+            }
+          },
+          "toolCallTimeoutMs": 120000,
+          "failOnStartupError": false,
+          "reconnect": {
+            "enabled": true,
+            "initialDelayMs": 1000,
+            "maxDelayMs": 30000,
+            "maxAttempts": 30
+          }
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "ui-theme",
+      "raw": {
+        "id": "ui-theme",
+        "name": "@deepseek-ai/dsh-client-ui-theme",
+        "config": {
+          "preference": "light"
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "subagent",
+      "raw": {
+        "id": "subagent",
+        "name": "@deepseek-ai/dsh-subagent",
+        "config": {
+          "maxActiveSubagents": 10,
+          "maxDepth": 2
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "plugin-market",
+      "raw": {
+        "id": "plugin-market",
+        "name": "@deepseek-ai/dsh-plugin-market",
+        "config": {
+          "indexes": [
+            "https://cdn.jsdelivr.net/npm/dsh-plugin-catalog/index.json",
+            "https://awesome-dsh-plugin.com/index.json"
+          ]
+        }
+      }
+    },
+    {
+      "file": "profiles/web/cordis.patch.yml",
+      "lineId": "locale",
+      "raw": {
+        "id": "locale",
+        "config": {
+          "preference": "zh"
+        }
+      }
+    }
+  ],
+  "pnpmWorkspace": "packages:\n  - .\n\nnodeLinker: hoisted\nautoInstallPeers: false\n"
+}
